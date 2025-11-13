@@ -56,3 +56,22 @@ H2 / Derby / Oracle DB (configurable)
 Maven
 
 HTML / CSS / JavaScript (Vanilla)
+
+
+
+
+How to Run the Application
+1. Clone the repository
+git clone https://github.com/tswnou/jpa-spring-exercise.git
+cd jpa-spring-exercise
+
+2. Navigate to the Spring Boot module
+cd demo
+
+3. Run with Maven Wrapper
+./mvnw spring-boot:run
+
+
+(Windows)
+
+mvnw.cmd spring-boot:run
