@@ -1,0 +1,171 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #ffe6f2, #fff5fa);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Main container */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #cc3366;
+}
+
+h2 {
+  color: #cc3366;
+  border-bottom: 2px solid #f5b7c5;
+  padding-bottom: 5px;
+}
+
+/* Form sections */
+.form-section {
+  background: #fff0f5;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Inputs and buttons (global) */
+input, button {
+  margin: 4px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #f4a1c3;
+  font-size: 15px;
+}
+
+button {
+  background-color: #ff6699;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #ff3385;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  border: 1px solid #f7c6d9;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #ff6699;
+  color: white;
+}
+
+/* Collapsible employee list */
+.employee-list {
+  display: none;
+  background: #ffe6f2;
+  border-left: 4px solid #ff99bb;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+
+.employee-list.show {
+  display: block;
+}
+
+.employee-item {
+  padding: 4px 0;
+  border-bottom: 1px solid #f5b7c5;
+}
+
+.employee-item:last-child {
+  border-bottom: none;
+}
+
+/* View employee button */
+.view-btn {
+  background-color: #ff99bb;
+}
+.view-btn:hover {
+  background-color: #ff6699;
+}
+
+
+/* Project row layout = exactly like Add Employee */
+.project-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Same size as Add Employee inputs */
+.project-row input {
+  width: 160px;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #f4a1c3;
+  background: white;
+  box-sizing: border-box;
+}
+
+/* --- Custom placeholders INSIDE date boxes --- */
+
+.project-row input[type="date"] {
+  color: transparent;       /* hide default date text until selected */
+  position: relative;
+}
+
+/* Fake placeholder text */
+.project-row input[type="date"]::before {
+  content: attr(data-placeholder); /* "Start Date" / "End Date" */
+  color: #888;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  pointer-events: none;
+  font-size: 14px;
+}
+
+/* When date selected → show real text */
+.project-row input[type="date"]:valid {
+  color: black;
+}
+
+/* Hide fake placeholder when valid */
+.project-row input[type="date"]:valid::before {
+  content: "";
+}
+
+/* Add Project button */
+.project-btn {
+  background: #ff6699;
+  padding: 10px 18px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  flex: 0 0 auto;
+}
+
+.project-btn:hover {
+  background-color: #ff3385;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee & Project Manager</title>
+
+    <link rel="stylesheet" href="/ProjectCss.css">
+</head>
+<body>
+<div class="container">
+    <h1>Employee & Project Manager</h1>
+
+    <!--Add Employee -->
+    <section class="form-section">
+        <h2>Add Employee</h2>
+
+        <form id="employeeForm">
+            <input type="text" id="empName" placeholder="Name" required>
+            <input type="number" id="empAge" placeholder="Age" required>
+            <input type="text" id="empRole" placeholder="Role" required>
+            <button type="submit">Add Employee</button>
+        </form>
+    </section>
+
+    <!-- Create Project-->
+    <section class="form-section">
+      <h2>Create Project</h2>
+
+
+
+         <div class="form-section form-row project-row">
+
+            <input type="text" id="projectName"
+               class="proj-input"
+               placeholder="Project Name">
+
+            <input type="date" id="projectStart" class="proj-input"
+               data-placeholder="Start Date" required>
+
+            <input type="date" id="projectEnd" class="proj-input"
+               data-placeholder="End Date" required>
+
+
+            <input type="number" id="projectBudget"
+               class="proj-input"
+               placeholder="Budget (€)">
+
+            <button class="project-btn" onclick="createProject()">Add Project</button>
+
+         </div>
+
+      </section>
+
+
+
+
+
+    <!--Assign Employee-->
+    <section class="form-section">
+        <h2>Assign Employee to Project</h2>
+        <!-- Call assignEmployee() instead of normal submit -->
+        <form id="assignForm" onsubmit="event.preventDefault(); assignEmployee();">
+            <input type="number" id="assignEmpId" placeholder="Employee ID" required>
+            <input type="number" id="assignProjId" placeholder="Project ID" required>
+            <button type="submit">Assign</button>
+        </form>
+    </section>
+
+<!--    new-->
+    <!-- Add Country -->
+    <section class="form-section">
+        <h2>Add Country</h2>
+        <form id="countryForm">
+            <input type="text" id="countryName" placeholder="Country Code (e.g. GR)" required>
+            <input type="text" id="countryDesc" placeholder="Description" required>
+            <button type="submit">Add Country</button>
+        </form>
+    </section>
+
+    <!-- Add Address -->
+    <section class="form-section">
+        <h2>Add Address</h2>
+        <form id="addressForm">
+            <input type="text" id="addrStreetName" placeholder="Street Name" required>
+            <input type="text" id="addrStreetNumber" placeholder="Street Number" required>
+            <input type="text" id="addrZip" placeholder="ZIP Code" required>
+            <input type="text" id="addrCity" placeholder="City" required>
+            <input type="text" id="addrCountryCode" placeholder="Country Code (GR, US...)" required>
+            <button type="submit">Add Address</button>
+        </form>
+    </section>
+
+    <!-- Add Department -->
+    <section class="form-section">
+        <h2>Add Department</h2>
+        <form id="departmentForm">
+            <input type="text" id="deptName" placeholder="Name" required>
+            <input type="number" id="deptAddressId" placeholder="Address ID" required>
+            <button type="submit">Add Department</button>
+        </form>
+    </section>
+
+    <!-- Add Employee Phone -->
+    <section class="form-section">
+        <h2>Add Employee Phone</h2>
+        <form id="phoneForm">
+            <input type="text" id="phoneValue" placeholder="Phone Number" required>
+            <input type="number" id="phoneEmployeeId" placeholder="Employee ID" required>
+            <button type="submit">Add Phone</button>
+        </form>
+    </section>
+
+<!--    new end-->
+
+    <!-- Employees Table -->
+    <section>
+        <h2>Employees</h2>
+        <table id="employeeTable">
+            <thead>
+            <tr><th>ID</th><th>Name</th><th>Age</th><th>Role</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+    <!--  Projects Table -->
+    <section>
+        <h2>Projects</h2>
+        <table id="projectTable">
+            <thead>
+            <tr><th>ID</th><th>Name</th><th>Start</th><th>End</th><th>Budget</th><th>Actions</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+</div>
+
+<!-- This is OK as long as ProjectJS.js is in src/main/resources/static -->
+<script src="/ProjectJS.js"></script>
+</body>
+</html>

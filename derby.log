@@ -1,0 +1,16 @@
+----------------------------------------------------------------
+Thu Nov 13 13:08:36 EET 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-7ce7-2a0e-0000011b2f98 
+on database directory memory:C:\Users\itsonou\OneDrive - Netcompany\Desktop\demo (3)\demoDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
+Loaded from file:/C:/Users/itsonou/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=25.0.1+8-27
+user.dir=C:\Users\itsonou\OneDrive - Netcompany\Desktop\demo (3)
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Thu Nov 13 13:09:34 EET 2025:
+Shutting down instance a816c00e-019a-7ce7-2a0e-0000011b2f98 on database directory memory:C:\Users\itsonou\OneDrive - Netcompany\Desktop\demo (3)\demoDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
