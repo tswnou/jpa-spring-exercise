@@ -303,3 +303,20 @@ document.getElementById("phoneForm").addEventListener("submit", async e => {
         alert("Error adding phone");
     }
 });
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById("toggleExtraBtn");
+    const extraSection = document.getElementById("extra-actions");
+
+    toggleBtn.addEventListener("click", () => {
+        const isHidden = extraSection.classList.toggle("hidden");
+
+        // Update button label
+        toggleBtn.textContent = isHidden
+            ? "More options ▸"
+            : "Hide options ▾";
+    });
+});

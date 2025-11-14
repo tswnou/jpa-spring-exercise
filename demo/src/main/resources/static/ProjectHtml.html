@@ -66,51 +66,61 @@
         </form>
     </section>
 
-<!--    new-->
-    <!-- Add Country -->
-    <section class="form-section">
-        <h2>Add Country</h2>
-        <form id="countryForm">
-            <input type="text" id="countryName" placeholder="Country Code (e.g. GR)" required>
-            <input type="text" id="countryDesc" placeholder="Description" required>
-            <button type="submit">Add Country</button>
-        </form>
+
+
+
+    <div class="toolbar">
+        <button id="toggleExtraBtn" type="button">More options ▸</button>
+    </div>
+
+    <section id="extra-actions" class="hidden">
+
+        <!-- Add Country -->
+        <section class="form-section">
+            <h2>Add Country</h2>
+            <form id="countryForm">
+                <input type="text" id="countryName" placeholder="Country Code (e.g. GR)" required>
+                <input type="text" id="countryDesc" placeholder="Description" required>
+                <button type="submit">Add Country</button>
+            </form>
+        </section>
+
+        <!-- Add Address -->
+        <section class="form-section">
+            <h2>Add Address</h2>
+            <form id="addressForm">
+                <input type="text" id="addrStreetName" placeholder="Street Name" required>
+                <input type="text" id="addrStreetNumber" placeholder="Street Number" required>
+                <input type="text" id="addrZip" placeholder="ZIP Code" required>
+                <input type="text" id="addrCity" placeholder="City" required>
+                <input type="text" id="addrCountryCode" placeholder="Country Code (GR, US...)" required>
+                <button type="submit">Add Address</button>
+            </form>
+        </section>
+
+        <!-- Add Department -->
+        <section class="form-section">
+            <h2>Add Department</h2>
+            <form id="departmentForm">
+                <input type="text" id="deptName" placeholder="Name" required>
+                <input type="number" id="deptAddressId" placeholder="Address ID" required>
+                <button type="submit">Add Department</button>
+            </form>
+        </section>
+
+        <!-- Add Employee Phone -->
+        <section class="form-section">
+            <h2>Add Employee Phone</h2>
+            <form id="phoneForm">
+                <input type="text" id="phoneValue" placeholder="Phone Number" required>
+                <input type="number" id="phoneEmployeeId" placeholder="Employee ID" required>
+                <button type="submit">Add Phone</button>
+            </form>
+        </section>
+
     </section>
 
-    <!-- Add Address -->
-    <section class="form-section">
-        <h2>Add Address</h2>
-        <form id="addressForm">
-            <input type="text" id="addrStreetName" placeholder="Street Name" required>
-            <input type="text" id="addrStreetNumber" placeholder="Street Number" required>
-            <input type="text" id="addrZip" placeholder="ZIP Code" required>
-            <input type="text" id="addrCity" placeholder="City" required>
-            <input type="text" id="addrCountryCode" placeholder="Country Code (GR, US...)" required>
-            <button type="submit">Add Address</button>
-        </form>
-    </section>
-
-    <!-- Add Department -->
-    <section class="form-section">
-        <h2>Add Department</h2>
-        <form id="departmentForm">
-            <input type="text" id="deptName" placeholder="Name" required>
-            <input type="number" id="deptAddressId" placeholder="Address ID" required>
-            <button type="submit">Add Department</button>
-        </form>
-    </section>
-
-    <!-- Add Employee Phone -->
-    <section class="form-section">
-        <h2>Add Employee Phone</h2>
-        <form id="phoneForm">
-            <input type="text" id="phoneValue" placeholder="Phone Number" required>
-            <input type="number" id="phoneEmployeeId" placeholder="Employee ID" required>
-            <button type="submit">Add Phone</button>
-        </form>
-    </section>
-
-<!--    new end-->
+    <h1>Employees & Projects</h1>
 
     <!-- Employees Table -->
     <section>

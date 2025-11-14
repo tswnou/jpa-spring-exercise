@@ -169,3 +169,44 @@ th {
 .project-btn:hover {
   background-color: #ff3385;
 }
+
+/*new */
+/* put header title on left and button on right */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* hide element when .hidden is applied */
+.hidden {
+    display: none;
+}
+
+/* optional panel styling */
+#extra-actions {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-left: 2px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+
+
+.toolbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+#toggleExtraBtn {
+    background-color: #ff7eb8;
+    border: none;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
