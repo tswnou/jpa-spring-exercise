@@ -7,6 +7,25 @@
     <link rel="stylesheet" href="/ProjectCss.css">
 </head>
 <body>
+
+<!-- TOP-RIGHT MENU BUTTON -->
+<button id="sideMenuBtn">☰ Menu</button>
+
+<!-- SIDE DRAWER -->
+<div id="sideMenu">
+
+    <h2>Menu</h2>
+
+    <button class="drawer-btn" onclick="toggleDepartments()">Departments Overview</button>
+    <div id="departmentsPanel" class="drawer-panel hidden"></div>
+
+    <button class="drawer-btn" onclick="toggleEmployeeInfo()">Employee Info</button>
+    <div id="employeeInfoPanel" class="drawer-panel hidden"></div>
+
+</div>
+
+
+
 <div class="container">
     <h1>Employee & Project Manager</h1>
 

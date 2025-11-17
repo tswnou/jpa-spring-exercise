@@ -144,17 +144,16 @@ th {
   font-size: 14px;
 }
 
-/* When date selected → show real text */
+
 .project-row input[type="date"]:valid {
   color: black;
 }
 
-/* Hide fake placeholder when valid */
 .project-row input[type="date"]:valid::before {
   content: "";
 }
 
-/* Add Project button */
+
 .project-btn {
   background: #ff6699;
   padding: 10px 18px;
@@ -170,8 +169,7 @@ th {
   background-color: #ff3385;
 }
 
-/*new */
-/* put header title on left and button on right */
+
 header {
     display: flex;
     justify-content: space-between;
@@ -179,18 +177,23 @@ header {
 }
 
 
-/* hide element when .hidden is applied */
+
 .hidden {
     display: none;
 }
 
-/* optional panel styling */
+
 #extra-actions {
     margin-top: 1rem;
     padding: 1rem;
-    border-left: 2px solid #ccc;
-    background-color: #f9f9f9;
+    border-left: 2px solid #f5b7c5;
+    border-right: 2px solid #f5b7c5;
+    border-top: 2px solid #f5b7c5;
+    border-bottom: 2px solid #f5b7c5;
+    background: linear-gradient(to bottom right, #f7d0df, #f7e8f0);
+    border-radius: 10px;
 }
+
 
 
 
@@ -210,3 +213,95 @@ header {
     cursor: pointer;
 }
 
+
+/* --- MENU BUTTON (TOP RIGHT) --- */
+#sideMenuBtn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background-color: #ff7eb8;
+    color: white;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+#sideMenuBtn:hover {
+    background-color: #ff4f9a;
+}
+
+/* --- SIDE menu --- */
+#sideMenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100%;
+    background: #fff0f5;
+    border-left: 3px solid #f5b7c5;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.15);
+    padding: 20px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1500;
+    overflow-y: auto;
+}
+
+
+#sideMenu.open {
+    transform: translateX(0);
+}
+
+
+.drawer-btn {
+    display: block;
+    width: 100%;
+    margin: 12px 0;
+    padding: 10px;
+    background-color: #ff7eb8;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.drawer-btn:hover {
+    background-color: #ff4f9a;
+}
+
+.drawer-panel {
+    background: #ffe6f2;
+    border: 2px solid #f5b7c5;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+/*button*/
+.drawer-panel {
+    background: #ffe6f2;
+    border: 2px solid #f5b7c5;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.info-item {
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #f3c2d3;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+.info-item:last-child {
+    margin-bottom: 0;
+}

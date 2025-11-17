@@ -5,7 +5,7 @@ import com.exercise.demo.entity.Project;
 import com.exercise.demo.entity.ProjectAssignments;
 import com.exercise.demo.repository.ProjectRepository;
 
-import com.exercise.demo.service.ProjectSevice;
+import com.exercise.demo.service.ProjectService;
 import com.exercise.demo.web.dto.CreateProjectRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -21,12 +21,12 @@ public class ProjectController {
 
 
     private final ProjectRepository projectRepo;
-    private final ProjectSevice projectSevice;
+    private final ProjectService projectService;
 
-    public ProjectController(ProjectRepository projectRepo, ProjectSevice projectSevice ) {
+    public ProjectController(ProjectRepository projectRepo, ProjectService projectService) {
 
         this.projectRepo = projectRepo;
-        this.projectSevice = projectSevice;
+        this.projectService = projectService;
 
     }
 
@@ -86,7 +86,7 @@ public class ProjectController {
 
     @PostMapping("/{projectId}/assign/{employeeId}")
     public ResponseEntity<ProjectAssignments> assign (@PathVariable Long projectId, @PathVariable Long employeeId) {
-        ProjectAssignments link = projectSevice.assignEmployeeToProject(projectId, employeeId );
+        ProjectAssignments link = projectService.assignEmployeeToProject(projectId, employeeId );
         return ResponseEntity.ok(link);
     }
 

@@ -1,5 +1,6 @@
 package com.exercise.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import jakarta.persistence.OneToMany;
@@ -36,6 +37,13 @@ public class Employee {
     @OneToMany(mappedBy = "employee" , cascade = CascadeType.ALL, orphanRemoval = true)
     //An employee can have multiple phone numbers.
     private List<EmployeePhone> phones = new ArrayList<>();
+
+
+    //new
+    @ManyToMany(mappedBy = "employees")
+    @JsonManagedReference
+    private List<Project> projects;
+
 
 
     //constructors

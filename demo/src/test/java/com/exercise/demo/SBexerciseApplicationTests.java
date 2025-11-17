@@ -2,20 +2,15 @@ package com.exercise.demo;
 
 import com.exercise.demo.entity.*;
 import com.exercise.demo.repository.*;
-import com.exercise.demo.service.ProjectSevice;
+import com.exercise.demo.service.ProjectService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import com.exercise.demo.entity.Employee;
 import com.exercise.demo.repository.EmployeeRepository;
 import com.exercise.demo.repository.ProjectRepository;
-import com.exercise.demo.service.ProjectSevice;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.context.TestComponent;
 
 import java.math.BigDecimal;
-import java.sql.Timestamp;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -35,7 +30,7 @@ class SBexerciseApplicationTests {
     private ProjectRepository projectRepository;
 
     @Autowired
-    private ProjectSevice projectSevice;
+    private ProjectService projectService;
 
     @Autowired
     private AddressRepository addressRepository;
@@ -68,7 +63,7 @@ class SBexerciseApplicationTests {
 
         //Assign Employee → Project
 
-        ProjectAssignments assignment = projectSevice.assignEmployeeToProject(project.getId(), emp.getId());
+        ProjectAssignments assignment = projectService.assignEmployeeToProject(project.getId(), emp.getId());
 
         //verify / Assertions
         assertNotNull(assignment);
@@ -115,6 +110,7 @@ class SBexerciseApplicationTests {
 
         System.out.println("Reference data (Country → Address → Department) saved successfully!");
     }
+
 
 
 

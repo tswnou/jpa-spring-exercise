@@ -1,5 +1,6 @@
 package com.exercise.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
 import java.math.BigDecimal;
@@ -39,6 +40,17 @@ public class Project {
         this.budget = budget;
 
     }
+
+    //new
+    @ManyToMany
+    @JoinTable(
+            name = "project_assignments",
+            joinColumns = @JoinColumn(name = "project_id"),
+            inverseJoinColumns = @JoinColumn(name = "employee_id")
+    )
+    @JsonBackReference
+    private List<Employee> employees;
+
 
     //getters setters
 

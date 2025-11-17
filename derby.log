@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Thu Nov 13 15:21:06 EET 2025:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-7d60-7890-00000198cca8 
+Fri Nov 14 10:32:37 EET 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.16.1.1 - (1901046): instance a816c00e-019a-817e-b9c2-0000011b76b0 
 on database directory memory:C:\Users\itsonou\OneDrive - Netcompany\Desktop\demo (3)\demoDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
 Loaded from file:/C:/Users/itsonou/.m2/repository/org/apache/derby/derby/10.16.1.1/derby-10.16.1.1.jar
 java.vendor=Oracle Corporation
@@ -12,5 +12,5 @@ os.version=10.0
 derby.system.home=null
 Database Class Loader started - derby.database.classpath=''
 ----------------------------------------------------------------
-Thu Nov 13 15:22:55 EET 2025:
-Shutting down instance a816c00e-019a-7d60-7890-00000198cca8 on database directory memory:C:\Users\itsonou\OneDrive - Netcompany\Desktop\demo (3)\demoDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 
+Fri Nov 14 10:39:38 EET 2025:
+Shutting down instance a816c00e-019a-817e-b9c2-0000011b76b0 on database directory memory:C:\Users\itsonou\OneDrive - Netcompany\Desktop\demo (3)\demoDB with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@14dad5dc 

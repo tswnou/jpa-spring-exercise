@@ -320,3 +320,77 @@ document.addEventListener('DOMContentLoaded', () => {
             : "Hide options ▾";
     });
 });
+
+//js open close menu bar
+
+document.getElementById("sideMenuBtn").addEventListener("click", () => {
+    document.getElementById("sideMenu").classList.toggle("open");
+});
+
+
+async function toggleDepartments() {
+    const panel = document.getElementById("departmentsPanel");
+
+    // Toggle visibility
+    panel.classList.toggle("hidden");
+    if (panel.classList.contains("hidden")) {
+        panel.innerHTML = "";
+        return;
+    }
+
+    // Fetch departments
+    const res = await fetch("/api/departments");
+    const departments = await res.json();
+
+    if (!departments.length) {
+        panel.innerHTML = "<p>No departments found.</p>";
+        return;
+    }
+
+    // Build pretty list
+    panel.innerHTML = departments.map(d => `
+        <div class="info-item">
+            <b>${d.name}</b><br>
+            <small>
+                <b>Address:</b> ${d.address.streetName} ${d.address.streetNumber}<br>
+                <b>City:</b> ${d.address.city}, ZIP ${d.address.zipCode}<br>
+                <b>Country:</b> ${d.address.country.name} (${d.address.country.description})
+            </small>
+        </div>
+    `).join("");
+}
+
+
+async function toggleEmployeeInfo() {
+    const panel = document.getElementById("employeeInfoPanel");
+
+    // Toggle visibility
+    panel.classList.toggle("hidden");
+    if (panel.classList.contains("hidden")) {
+        panel.innerHTML = "";
+        return;
+    }
+
+    // Fetch employees
+    const res = await fetch("/api/employees");
+    const employees = await res.json();
+
+    if (!employees.length) {
+        panel.innerHTML = "<p>No employees found.</p>";
+        return;
+    }
+
+    panel.innerHTML = employees.map(e => `
+        <div class="info-item">
+            <b>${e.name}</b> — ${e.role}<br>
+            <small>
+                <b>Age:</b> ${e.age}<br>
+                <b>Phones:</b> ${e.phones?.map(p => p.value).join(", ") || "None"}<br>
+                <b>Department:</b> ${e.department?.name || "—"}<br>
+                <b>Projects:</b> ${e.projects?.map(p => p.name).join(", ") || "None"}
+            </small>
+        </div>
+    `).join("");
+}
+
+
